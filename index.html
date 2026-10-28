@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#075985">
+    <meta name="description" content="Discover beautiful destinations, explore tour packages and plan your next adventure with Travel Explorer.">
+
+    <title>Travel Explorer | Discover Your World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header" id="home">
+        <a href="#home" class="brand" aria-label="Travel Explorer home">
+            <span class="brand-icon">✈</span>
+            <span>
+                <span class="brand-name">Travel Explorer</span>
+                <span class="brand-tagline">Explore · Discover · Experience</span>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle"
+                type="button" aria-label="Open navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="main-nav" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#india">India</a>
+            <a href="#world">World</a>
+            <a href="#packages">Tour Packages</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#booking" class="header-book">Book a Tour ↗</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</span>
+                <h1>Collect moments.<br>Discover <span>the world.</span></h1>
+                <p>From peaceful beaches to breathtaking mountains, find a journey that stays with you forever.</p>
+
+                <div class="hero-actions">
+                    <a href="#packages" class="button button-primary">Explore Destinations ↗</a>
+                    <a href="#about" class="button button-outline">Discover Our Story</a>
+                </div>
+
+                <div class="hero-trust">
+                    <span>✦ Curated journeys</span>
+                    <span>✦ Beautiful destinations</span>
+                    <span>✦ Adventures for everyone</span>
+                </div>
+            </div>
+
+            <div class="hero-caption">
+                <span>FIND YOUR HAPPY PLACE</span>
+                <strong>There is a world waiting for you.</strong>
+            </div>
+        </section>
+
+        <section class="quick-search" aria-label="Find a destination">
+            <div>
+                <span class="search-label">WHERE TO NEXT?</span>
+                <h2>Find your next escape</h2>
+            </div>
+            <div class="quick-search-control">
+                <label for="search">Destination or tour name</label>
+                <input type="search" id="search" placeholder="Try Goa, Paris, Kerala...">
+            </div>
+            <a href="#packages" class="button button-primary">Find Tours →</a>
+        </section>
+
+        <section class="section destination-section" id="india">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">INCREDIBLE EXPERIENCES</span>
+                    <h2>Explore incredible India</h2>
+                    <p>Discover colourful cultures, timeless monuments and natural wonders.</p>
+                </div>
+                <a href="#packages" class="text-link">Explore all tours ↗</a>
+            </div>
+
+            <div class="destination-grid">
+                <a href="#packages" class="destination-tile tile-goa">
+                    <span class="tile-label">BEACHES & SUNSETS</span>
+                    <h3>Goa</h3>
+                    <span>Explore destination ↗</span>
+                </a>
+                <a href="#packages" class="destination-tile tile-kerala">
+                    <span class="tile-label">BACKWATERS & NATURE</span>
+                    <h3>Kerala</h3>
+                    <span>Explore destination ↗</span>
+                </a>
+                <a href="#packages" class="destination-tile tile-rajasthan">
+                    <span class="tile-label">ROYAL HERITAGE</span>
+                    <h3>Rajasthan</h3>
+                    <span>Explore destination ↗</span>
+                </a>
+                <a href="#packages" class="destination-tile tile-himalaya">
+                    <span class="tile-label">MOUNTAINS & ADVENTURE</span>
+                    <h3>Himalayas</h3>
+                    <span>Explore destination ↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section world-section" id="world">
+            <div class="world-banner">
+                <div>
+                    <span class="eyebrow">BEYOND BORDERS</span>
+                    <h2>The world is closer<br>than you think.</h2>
+                    <p>Dream of international adventures? Start exploring places that inspire you.</p>
+                    <a href="#packages" class="button button-light">Discover World Tours ↗</a>
+                </div>
+                <div class="world-stamp">
+                    <span>✈</span>
+                    <strong>YOUR</strong>
+                    <strong>WORLD</strong>
+                    <strong>AWAITS</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="packages">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">HANDPICKED FOR YOU</span>
+                    <h2>Journeys worth remembering</h2>
+                    <p>Explore our available tour packages and find your perfect getaway.</p>
+                </div>
+                <span class="package-count" id="package-count">Explore tours</span>
+            </div>
+
+            <div id="package-list" class="package-container">
+                <p class="loading-message">Discovering beautiful destinations...</p>
+            </div>
+
+            <p class="empty-message" id="empty-message" hidden>
+                No tours found. Try a different destination or search term.
+            </p>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="about-image" role="img" aria-label="Beautiful travel landscape">
+                <span>MAKE EVERY JOURNEY COUNT</span>
+            </div>
+            <div class="about-content">
+                <span class="eyebrow">A LITTLE ABOUT US</span>
+                <h2>Travel is more than reaching a place.</h2>
+                <p>It is about the people you meet, the stories you collect and the memories you carry home.</p>
+                <p>Travel Explorer helps you discover destinations, compare tour ideas and plan your next adventure in one place.</p>
+                <div class="about-points">
+                    <span>✓ Destination inspiration</span>
+                    <span>✓ Easy tour discovery</span>
+                    <span>✓ Simple request form</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section" id="booking">
+            <div class="booking-intro">
+                <span class="eyebrow">LET'S PLAN YOUR JOURNEY</span>
+                <h2>Your next chapter<br>starts with a trip.</h2>
+                <p>Tell us where you want to go. Submit your tour request and keep your travel plans organised.</p>
+                <div class="booking-note">
+                    <span>✈</span>
+                    <p><strong>Your adventure, your way.</strong><br>Choose a destination and your preferred travel date.</p>
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <h2>Plan your trip</h2>
+                <p class="form-subtitle">Fill in your details to prepare a tour request.</p>
+
+                <form id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your full name</label>
+                            <input type="text" id="name" name="name"
+                                   placeholder="Enter your name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email"
+                                   placeholder="you@example.com" autocomplete="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <select id="destination" name="destination" required>
+                                <option value="">Choose your destination</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Travel date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="travelers">Number of travellers</label>
+                        <select id="travelers" name="travelers" required>
+                            <option value="1">1 traveller</option>
+                            <option value="2" selected>2 travellers</option>
+                            <option value="3">3 travellers</option>
+                            <option value="4">4 travellers</option>
+                            <option value="5">5 travellers</option>
+                            <option value="6">6 travellers</option>
+                            <option value="7">7 travellers</option>
+                            <option value="8">8 travellers</option>
+                            <option value="9">9 travellers</option>
+                            <option value="10">10 travellers</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="button button-primary submit-button">
+                        Submit Tour Request ↗
+                    </button>
+
+                    <p class="privacy-note">Your details are used to prepare this request. This page does not process payments.</p>
+                </form>
+
+                <div id="message" class="confirmation" role="status" aria-live="polite" hidden></div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div>
+                <span class="eyebrow">NEED A LITTLE HELP?</span>
+                <h2>Let's talk travel.</h2>
+                <p>Have questions about a destination? Get in touch with our travel team.</p>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">✉</span>
+                <div>
+                    <strong>Email us</strong>
+                    <p>travel@example.com</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">☎</span>
+                <div>
+                    <strong>Call us</strong>
+                    <p>9876543210</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="#home" class="footer-brand">✈ Travel Explorer</a>
+        <p>Explore more. Discover deeper. Make memories.</p>
+        <div class="footer-links">
+            <a href="#india">India</a>
+            <a href="#world">World</a>
+            <a href="#packages">Tour Packages</a>
+            <a href="#booking">Plan a Trip</a>
+        </div>
+        <p class="copyright">© 2026 Travel Explorer | BCA Project</p>
+    </footer>
+
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
